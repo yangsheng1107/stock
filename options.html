@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap Vertical Tabs</title>
+  <link rel="stylesheet" href="bootstrap-3.3.6/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-3.3.6/bootstrap.vertical-tabs.min.css">
+  <style>
+ .table .cellEditing {
+}
+ .table .cellEditing input[type=text]{
+    background-color:rgb(255,253,210);
+}
+</style>
+  <script src="jquery-2.2.1.min.js"></script>
+  <script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="options.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Bootstrap Vertical Tabs <small> | Demo</small></h1>
+    </div>
+
+    <div class="row" style="min-height:600px;">
+      <div  class="col-md-12">
+        <div class="col-md-1"> <!-- required for floating -->
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs tabs-left sideways">
+            <li class="active"><a href="#home"  id="tab-home" data-toggle="tab">Home</a></li>
+            <li><a href="#backup" id="tab-backup" data-toggle="tab">Backup</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-11">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+              <table class="table" id="diagnosis_list">
+                <thead>
+                  <tr>
+                    <th>Priority</th>
+                    <th>Stock Number</th>
+                    <th>Stock Name</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+<!-- required for floating
+                   <tr id='stock1'><td class='priority td-edit'>1</td><td class='td-edit'> 001 </td><td class='td-edit'>Name1</td><td><a class='btn btn-delete btn-danger'>Delete</a></td></tr>
+                   <tr id='stock2'><td class='priority td-edit'>2</td><td class='td-edit'> 002 </td><td class='td-edit'>Name2</td><td><a class='btn btn-delete btn-danger'>Delete</a></td></tr>
+                   <tr id='stock3'><td class='priority td-edit'>3</td><td class='td-edit'> 003 </td><td class='td-edit'>Name3</td><td><a class='btn btn-delete btn-danger'>Delete</a></td></tr>
+-->
+                </tbody>
+              </table>
+              <form class="form-inline" role="form">
+                <div class="form-group">
+                  <input type="text" id='text-id' placeholder='2330' class="form-control"/>
+                  <input type="text" id='text-name' placeholder='台積電' class="form-control"/>
+                </div>
+                <a id="add_row" class="btn btn-default">Add Row</a>
+                <a id="btn-save" class="btn btn-danger">Save</a>
+              </form>
+
+            </div>
+            <div class="tab-pane " id="backup">
+              <a id="btn-export" class="btn btn-default">Export</a>
+              <textarea id="txt-export" class="form-control custom-control" rows="3" style="resize:none"></textarea>
+              <hr>
+              <a id="btn-import" class="btn btn-default">Import</a>
+              <textarea id="txt-import" class="form-control custom-control" rows="3" style="resize:none"></textarea>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="width:100%; text-align:center; padding-bottom:20px;">
+    <hr/>
+    <a href="https://github.com/dbtek/bootstrap-vertical-tabs">Bootstrap Vertical Tabs</a> is brought to you by <a href="http://ismaildemirbilek.com">dbtek</a>, open sourced under <a href="opensource.org/licenses/MIT">MIT</a> license.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <style>
+      table {
+        width:100%;
+      }
+      tr#header{
+        color: gray;
+        font-weight: bold;
+      }
+      td {
+        font-size: 10px;
+        font-family: arial;
+        color: gray;
+        text-align:center;
+        border-top:1px solid white;
+        border-bottom:1px solid #E1E1E1;
+        padding:3px 3px 3px 3px;
+      }
+      td#price {
+        color: black;
+        font-weight: bold;
+      }
+      td#name {
+        color: gray;
+      }
+      td#diff {
+        font-weight: bold;
+      }
+      td#diff {
+        font-weight: bold;
+      }
+      td#diff.red {
+        color:red;
+      }
+      td#diff.green {
+        color:green;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery-2.2.1.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <table id='result' cellspacing="0" cellpadding="0">
+      <thead>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </body>
+</html>
+
